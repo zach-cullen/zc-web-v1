@@ -1,38 +1,10 @@
-import Head from 'next/head'
-
-export default function Home () {
+export default () => {
   return (
-    <div className='container'>
-      <Head>
-        <title>Zach Cullen | Software Engineer | Front End Web Developer </title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <main>
-        <h1 className='title'>
-          Zach Cullen
-        </h1>
-
-        <p className='description'>
-          Software Engineer
-        </p>
-      </main>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}
-      </style>
-    </div>
+    <>
+      <h1>Hi, I'm Zach Cullen</h1>
+      <p>
+        A Software Engineer with a background in video production and web design. Join me as I explore the frontiers of modern web app development using React & JavaScript.
+      </p>
+    </>
   )
 }
