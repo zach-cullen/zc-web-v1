@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "standard": "*"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
