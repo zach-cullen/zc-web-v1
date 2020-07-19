@@ -1,15 +1,16 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
+import { Link } from '@chakra-ui/core'
 
 export default () => (
   <header>
-    <Link href='/'>
-      <a>Home</a>
-    </Link>
-    <Link href='/about'>
-      <a>About</a>
-    </Link>
-    <Link href='/blog'>
-      <a>Blog</a>
-    </Link>
+    <NextLink href='/'>
+      <Link>Home</Link>
+    </NextLink>
+    <NextLink href='/about'>
+      <Link>About</Link>
+    </NextLink>
+    <NextLink href='/blog'>
+      <Link>Blog</Link>
+    </NextLink>
   </header>
 )
