@@ -1,21 +1,10 @@
-import App from 'next/app'
-import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, CSSReset } from '@chakra-ui/core'
 
-const theme = {
-  colors: {
-    primary: 'red'
-  }
-}
+const App = ({ Component, pageProps }) => (
+  <ThemeProvider>
+    <CSSReset />
+    <Component {...pageProps} />
+  </ThemeProvider>
+)
 
-export default class MyApp extends App {
-  render () {
-    const { Component, pageProps } = this.props
-
-    return (
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    )
-  }
-}
+export default App
