@@ -1,14 +1,15 @@
 import Header from '../../components/header'
-import Link from 'next/link'
+import NextLink from 'next/link'
+import { Box, Link, Heading } from '@chakra-ui/core'
 
 const Blog = ({ posts }) => {
   const renderPosts = (posts) => {
     return posts.map((post) => {
       return (
         <li key={post.id}>
-          <Link as={`blog/${post.id}`} href='/blog/[id]'>
-            <a>{post.title}</a>
-          </Link>
+          <NextLink as={`blog/${post.id}`} href='/blog/[id]'>
+            <Link>{post.title}</Link>
+          </NextLink>
         </li>
       )
     })
@@ -16,11 +17,16 @@ const Blog = ({ posts }) => {
   return (
     <>
       <Header />
-      <h1>Blog</h1>
-      <h2>Posts</h2>
-      <ul>
-        {renderPosts(posts)}
-      </ul>
+      <Box
+        maxW='720px'
+        m='0 auto'
+      >
+        <Heading as='h1' fontSize={['2xl', '4xl']}>Blog</Heading>
+        <Heading as='h2' fontSize={['lrg', '2xl']}>Posts</Heading>
+        <ul>
+          {renderPosts(posts)}
+        </ul>
+      </Box>
     </>
   )
 }
