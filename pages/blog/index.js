@@ -1,6 +1,7 @@
-import Header from '../../components/header'
+import Header from '../../components/Header'
+import PageSection from '../../components/PageSection'
 import NextLink from 'next/link'
-import { Box, Link, Heading } from '@chakra-ui/core'
+import { Link, Heading } from '@chakra-ui/core'
 
 const Blog = ({ posts }) => {
   const renderPosts = (posts) => {
@@ -17,16 +18,13 @@ const Blog = ({ posts }) => {
   return (
     <>
       <Header />
-      <Box
-        maxW='720px'
-        m='0 auto'
-      >
+      <PageSection>
         <Heading as='h1' fontSize={['2xl', '4xl']}>Blog</Heading>
         <Heading as='h2' fontSize={['lrg', '2xl']}>Posts</Heading>
         <ul>
           {renderPosts(posts)}
         </ul>
-      </Box>
+      </PageSection>
     </>
   )
 }
