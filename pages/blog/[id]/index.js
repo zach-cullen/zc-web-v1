@@ -1,6 +1,7 @@
 import {useRouter} from 'next/router'
-
-import Header from '../../../components/header'
+import { Heading } from '@chakra-ui/core'
+import Header from '../../../components/Header'
+import PageSection from '../../../components/PageSection'
 
 const BlogPost = ({ title, body}) => {
   const router = useRouter()
@@ -9,8 +10,10 @@ const BlogPost = ({ title, body}) => {
   return(
     <>
       <Header />
-      <h1>{title}</h1>
-      <p>{body}</p>
+      <PageSection>
+        <Heading as='h1' size='xl'>{title}</Heading>
+        <p>{body}</p>
+      </PageSection>
     </>
   )
 }
