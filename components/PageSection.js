@@ -6,7 +6,7 @@ export default ({ children, sectionBg }) => {
       bg={sectionBg}
     >
       <Box
-        maxW='720px'
+        maxW='800px'
         mx='auto'
         p={4}
       >
